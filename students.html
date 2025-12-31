@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>SIRS – Student Profiles</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
+</head>
+<body class="d-flex flex-column min-vh-100">
+
+  <div class="app-bg-image"></div>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg bg-white border-bottom fixed-top">
+  <div class="container-fluid">
+    <button class="btn btn-outline-secondary d-lg-none me-2" data-bs-toggle="offcanvas" data-bs-target="#mobileSidebar">☰</button>
+    <h4 class="fw-bold text-purple mb-0 d-none d-md-block">SIRS</h4>
+    <div class="ms-auto d-flex align-items-center">
+      <span class="me-2 fw-semibold">Hello, Admin</span>
+      <br><br>
+    </div>
+  </div>
+</nav>
+
+<!-- MOBILE SIDEBAR -->
+<div class="offcanvas offcanvas-start" id="mobileSidebar">
+  <div class="offcanvas-header">
+    <div class="mb-0">
+      <img src="assets/logo2.png" alt="SIRS Logo" style="max-width: 100px; height: auto;">
+    </div>
+    <button class="btn-close" data-bs-dismiss="offcanvas"></button>
+  </div>
+  <div class="offcanvas-body">
+    <ul class="nav flex-column gap-2">
+      <li><a class="nav-link" href="dashboard.html">Dashboard</a></li>
+      <li><a class="nav-link" href="reports.html">All Reports</a></li>
+      <li><a class="nav-link active" href="students.html">Student Profiles</a></li>
+      <li><a class="nav-link text-danger" href="index.html">Logout</a></li>
+    </ul>
+  </div>
+</div>
+
+<div class="container-fluid flex-grow-1 mt-5 pt-3">
+  <div class="row">
+    
+    <!-- DESKTOP SIDEBAR -->
+    <aside class="col-lg-2 d-none d-lg-block bg-purple-light border-end">
+      <div class="px-3 pt-3 pb-3">
+        <div class="text-center mb-4">
+          <img src="assets/logo2.png" alt="SIRS Logo" style="max-width: 100px; height: auto; display: block; margin: 0 auto;">
+        </div>
+        <ul class="nav flex-column gap-2">
+          <li><a class="nav-link" href="dashboard.html">Dashboard</a></li>
+          <li><a class="nav-link" href="reports.html">All Reports</a></li>
+          <li><a class="nav-link active" href="students.html">Student Profiles</a></li>
+          <li><a class="nav-link text-danger" href="index.html">Logout</a></li>
+        </ul>
+      </div>
+    </aside>
+
+   <main class="col-lg-10 ms-auto flex-grow-1">
+      <div class="container mt-4 mb-4">
+        <h3 class="fw-bold mb-2">STUDENT PROFILES</h3>
+        <p class="text-muted mb-4">Registered students who have submitted issue reports</p>
+
+        <!-- MODERN TABLE -->
+        <div class="card modern-table-card shadow-sm mb-4">
+          <div class="table-responsive">
+            <table class="table modern-table mb-0">
+              <thead>
+                <tr>
+                  <th>Student</th>
+                  <th>Name</th>
+                  <th>Faculty</th>
+                  <th>Email</th>
+                  <th class="text-center">Reports</th>
+                  <th class="text-center">Status</th>
+                  <th class="text-center">Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                
+                <!-- Student 1 -->
+                <tr data-id="2023167890">
+                  <td>
+                    <div class="student-id-cell">
+                      <div class="student-avatar">MF</div>
+                      <span class="student-id-text">2023167890</span>
+                    </div>
+                  </td>
+                  <td class="student-name">Muhammad Farhan bin Abdullah</td>
+                  <td>Information Technology</td>
+                  <td><span class="student-email">farhan2023@student.uitm.edu.my</span></td>
+                  <td class="text-center">
+                    <span class="badge-count">8</span>
+                  </td>
+                  <td class="text-center">
+                    <span class="status-badge status-active">Active</span>
+                  </td>
+                  <td class="text-center">
+                    <button class="btn btn-sm btn-purple view-profile-btn" onclick="viewProfile('2023167890')">View Profile</button>
+                  </td>
+                </tr>
+                
+                <!-- Student 2 -->
+                <tr data-id="2023123456">
+                  <td>
+                    <div class="student-id-cell">
+                      <div class="student-avatar">AZ</div>
+                      <span class="student-id-text">2023123456</span>
+                    </div>
+                  </td>
+                  <td class="student-name">Ahmad Zaki bin Ismail</td>
+                  <td>Computer Science</td>
+                  <td><span class="student-email">zaki2023@student.uitm.edu.my</span></td>
+                  <td class="text-center">
+                    <span class="badge-count">5</span>
+                  </td>
+                  <td class="text-center">
+                    <span class="status-badge status-active">Active</span>
+                  </td>
+                  <td class="text-center">
+                    <button class="btn btn-sm btn-purple view-profile-btn" onclick="viewProfile('2023123456')">View Profile</button>
+                  </td>
+                </tr>
+                
+                <!-- Student 3 -->
+                <tr data-id="2023145678">
+                  <td>
+                    <div class="student-id-cell">
+                      <div class="student-avatar">NA</div>
+                      <span class="student-id-text">2023145678</span>
+                    </div>
+                  </td>
+                  <td class="student-name">Nurul Aina binti Hassan</td>
+                  <td>Information Management</td>
+                  <td><span class="student-email">aina2023@student.uitm.edu.my</span></td>
+                  <td class="text-center">
+                    <span class="badge-count">6</span>
+                  </td>
+                  <td class="text-center">
+                    <span class="status-badge status-active">Active</span>
+                  </td>
+                  <td class="text-center">
+                    <button class="btn btn-sm btn-purple view-profile-btn" onclick="viewProfile('2023145678')">View Profile</button>
+                  </td>
+                </tr>
+                
+                <!-- Student 4 -->
+                <tr data-id="2023189012">
+                  <td>
+                    <div class="student-id-cell">
+                      <div class="student-avatar">SN</div>
+                      <span class="student-id-text">2023189012</span>
+                    </div>
+                  </td>
+                  <td class="student-name">Siti Nurhaliza binti Ahmad</td>
+                  <td>Computer Science</td>
+                  <td><span class="student-email">siti2023@student.uitm.edu.my</span></td>
+                  <td class="text-center">
+                    <span class="badge-count">4</span>
+                  </td>
+                  <td class="text-center">
+                    <span class="status-badge status-active">Active</span>
+                  </td>
+                  <td class="text-center">
+                    <button class="btn btn-sm btn-purple view-profile-btn" onclick="viewProfile('2023189012')">View Profile</button>
+                  </td>
+                </tr>
+                
+                <!-- Student 5 -->
+                <tr data-id="2023201234">
+                  <td>
+                    <div class="student-id-cell">
+                      <div class="student-avatar">MR</div>
+                      <span class="student-id-text">2023201234</span>
+                    </div>
+                  </td>
+                  <td class="student-name">Mohd Rizal bin Yusof</td>
+                  <td>Information Management</td>
+                  <td><span class="student-email">rizal2023@student.uitm.edu.my</span></td>
+                  <td class="text-center">
+                    <span class="badge-count">2</span>
+                  </td>
+                  <td class="text-center">
+                    <span class="status-badge status-active">Active</span>
+                  </td>
+                  <td class="text-center">
+                    <button class="btn btn-sm btn-purple view-profile-btn" onclick="viewProfile('2023201234')">View Profile</button>
+                  </td>
+                </tr>
+                
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+       <div class="row g-3 justify-content-center">
+  <div class="col-md-4 col-lg-3">
+    <div class="card shadow-sm">
+      <div class="card-body text-center">
+        <h2 class="text-purple fw-bold">5</h2>
+        <p class="text-muted mb-0">Total Students</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-4 col-lg-3">
+    <div class="card shadow-sm">
+      <div class="card-body text-center">
+        <h2 class="text-success fw-bold">25</h2>
+        <p class="text-muted mb-0">Total Reports</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+      </div>
+    </main>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer class="mt-auto py-3 border-top text-center text-muted small">
+  © 2025 STUDENT ISSUES REPORTING SYSTEM – IMS566<br>
+  DEVELOPED BY: NUR FARAH IZZATI BINTI AHMAD SHUHAIMI & RAQIB MU'IZZUDDIN BIN MOHD ASRAF
+</footer>
+
+<script src="js/theme.js"></script>
+<script src="js/students.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
