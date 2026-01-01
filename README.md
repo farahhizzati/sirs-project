@@ -2,7 +2,7 @@
 
 ## Project Description
 
-SIRS (Student Issues Reporting System) is a web-based application developed for IMS566 coursework. The system provides a centralized platform for administrators to manage and monitor campus-related issue reports submitted by students, including facility problems, IT concerns, and safety matters.
+SIRS (Student Issues Reporting System) is a web-based application system that provides a centralized platform for administrators to manage and monitor campus-related issue reports submitted by students, including facility problems, IT concerns, and safety matters.
 
 ## Features Included
 
@@ -115,3 +115,4 @@ Developed By:
 
 
 © 2025 Student Issues Reporting System - IMS566 Individual Assignment
+
