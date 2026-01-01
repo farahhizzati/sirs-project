@@ -4,41 +4,41 @@
 const students = {
   '2023167890': {
     initials: 'MF',
-    name: 'Muhammad Farhan bin Abdullah',
+    name: 'Muhammad Farith',
     faculty: 'Information Technology',
-    email: 'farhan2023@student.uitm.edu.my',
+    email: 'farith20@student.uitm.edu.my',
     phone: '012-345 6789',
     program: 'Bachelor in Information Technology'
   },
   '2023123456': {
     initials: 'AZ',
-    name: 'Ahmad Zaki bin Ismail',
+    name: 'Abdul Zaki',
     faculty: 'Computer Science',
-    email: 'zaki2023@student.uitm.edu.my',
+    email: 'zaki22@student.uitm.edu.my',
     phone: '013-456 7890',
     program: 'Bachelor in Computer Science'
   },
   '2023145678': {
     initials: 'NA',
-    name: 'Nurul Aina binti Hassan',
+    name: 'Nurul Aina',
     faculty: 'Information Management',
-    email: 'aina2023@student.uitm.edu.my',
+    email: 'aina23@student.uitm.edu.my',
     phone: '014-567 8901',
     program: 'Bachelor in Information Management'
   },
   '2023189012': {
     initials: 'SN',
-    name: 'Siti Nurhaliza binti Ahmad',
+    name: 'Siti Nazifa',
     faculty: 'Computer Science',
-    email: 'siti2023@student.uitm.edu.my',
+    email: 'siti24@student.uitm.edu.my',
     phone: '015-678 9012',
     program: 'Bachelor in Computer Science'
   },
   '2023201234': {
     initials: 'MR',
-    name: 'Mohd Rizal bin Yusof',
+    name: 'Mohd Rahman',
     faculty: 'Information Management',
-    email: 'rizal2023@student.uitm.edu.my',
+    email: 'rahman21@student.uitm.edu.my',
     phone: '016-789 0123',
     program: 'Bachelor in Information Management'
   }
@@ -60,4 +60,5 @@ window.addEventListener('DOMContentLoaded', () => {
     document.getElementById('studentPhone').textContent = student.phone;
     document.getElementById('studentProgram').textContent = student.program;
   }
+
 });
